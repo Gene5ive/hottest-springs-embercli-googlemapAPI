@@ -10,6 +10,7 @@ Router.map(function() {
   this.resource('springs', function() {
     this.resource('spring', {path: ':spring_id'});
   });
+  this.route('spring-details', {path: 'spring/details/:spring_id'});
 });
 
 export default Router;

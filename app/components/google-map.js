@@ -1,29 +1,24 @@
 import Ember from "ember";
 
 var GoogleMapComponent = {
-    insertMap: function(){
+        insertMap: function(){
+        var lat = this.get('lat');
+        var long = this.get('long');
+
         var mapProp = {
-          center:new google.maps.LatLng(44.936088, -122.173220),
+          center:new google.maps.LatLng(lat, long),
           zoom:10,
           mapTypeId:google.maps.MapTypeId.ROADMAP
         };
         var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
         var marker=new google.maps.Marker({
-        position:new google.maps.LatLng(44.936088, -122.173220),
+        position:new google.maps.LatLng(lat, long),
         animation: google.maps.Animation.DROP
         });
 
         marker.setMap(map);
 
-        var marker=new google.maps.Marker({
-        position:new google.maps.LatLng(44.782246, -121.975622),
-        animation: google.maps.Animation.DROP
-
-        });
-
-        marker.setMap(map);
-
-    }.on('didInsertElement')
+    }.on("click")
 };
 
 export default Ember.Component.extend(GoogleMapComponent);
