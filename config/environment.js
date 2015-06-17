@@ -4,6 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'hottest-springs',
     environment: environment,
+    firebase: 'https://intense-heat-13.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

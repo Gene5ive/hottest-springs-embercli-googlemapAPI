@@ -8,7 +8,6 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('about');
   this.resource('springs');
-
 });
 
 export default Router;

@@ -5,3 +5,12 @@
   {{input value = long placeholder="Longitude"}}
   <button {{action 'add'}} class="btn btn-success">Add Hot Spring</button>
 </form>
+
+<ul>
+  {{#each spring in model}}
+    <li>
+      <h3>{{spring.springName}}</h3><br>
+      <p>Posted By: {{spring.author}}</p>
+    </li>
+  {{/each}}
+</ul>

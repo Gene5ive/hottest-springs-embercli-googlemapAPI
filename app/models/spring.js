@@ -3,7 +3,8 @@ import DS from 'ember-data';
 var attr = DS.attr;
 
 export default DS.Model.extend({
-  name: attr('string'),
+  springName: attr('string'),
   lat: attr('number'),
-  long: attr('number')
+  long: attr('number'),
+  author: attr('string')
 });
