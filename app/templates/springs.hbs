@@ -6,11 +6,19 @@
   <button {{action 'add'}} class="btn btn-success">Add Hot Spring</button>
 </form>
 
-<ul>
-  {{#each spring in model}}
-    <li>
-      <h3>{{spring.springName}}</h3><br>
-      <p>Posted By: {{spring.author}}</p>
-    </li>
-  {{/each}}
-</ul>
+<div class="row">
+  <div class="col-sm-4">
+    <ul class="list-unstyled">
+      {{#each spring in model}}
+        <li>
+          <h3 class="spring-name">{{#link-to 'spring' spring.id}}{{spring.springName}}{{/link-to}}</h3>
+          <p class="author">posted by: {{spring.author}}</p>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="col-sm-8">
+    {{outlet}}
+  </div>
+</div>

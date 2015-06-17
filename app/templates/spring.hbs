@@ -1,26 +1,15 @@
-
-
-We really know what we're talking about.
-
-
+<h1>{{model.springName}}</h1>
 <script>
 function initialize() {
   var mapProp = {
-    center:new google.maps.LatLng(44.936088, -122.173220),
+    center:new google.maps.LatLng({{model.lat}}, {{model.long}}),
     zoom:10,
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
   var marker=new google.maps.Marker({
-  position:new google.maps.LatLng(44.936088, -122.173220),
+  position:new google.maps.LatLng({{model.lat}}, {{model.long}}),
   animation: google.maps.Animation.DROP
-  });
-
-marker.setMap(map);
-  var marker=new google.maps.Marker({
-  position:new google.maps.LatLng(44.782246, -121.975622),
-  animation: google.maps.Animation.DROP
-
   });
 
 marker.setMap(map);

@@ -6,8 +6,9 @@ var SpringsController = {
           var newSpring = this.store.createRecord('spring', {
           springName: this.get('springName'),
           author: this.get('author'),
-          lat: parseInt(this.get('lat')),
-          long: parseInt(this.get('long')),
+          lat: this.get('lat'),
+          long: this.get('long'),
+          zoom: 6
         });
         newSpring.save();
         this.setProperties({

@@ -6,5 +6,8 @@ export default DS.Model.extend({
   springName: attr('string'),
   lat: attr('number'),
   long: attr('number'),
-  author: attr('string')
+  author: attr('string'),
+  zoom: attr('number'),
+  asGoogleMap: ['lat', 'long', 'zoom']
+
 });
