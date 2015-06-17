@@ -6,7 +6,34 @@ We really know what we're talking about.
   {{input value = lat-long}}
   <button {{action 'lookup'}} class="btn btn-submit">Lookup Hot Spring</button>
 </form> -->
+
+
+
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(44.936088, -122.173220),
+    zoom:6,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  var marker=new google.maps.Marker({
+  position:new google.maps.LatLng(44.936088, -122.173220),
+  });
+
+marker.setMap(map);
+
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+
+</script>
+
+
 <div id="googleMap" style="width:500px;height:380px;"></div>
+
 
 <div class="map-canvas">
 </div>
