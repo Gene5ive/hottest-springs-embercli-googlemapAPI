@@ -14,3 +14,7 @@ body{
 .author{
   font-style:italic;
 }
+
+#one, #two, #three, #four, #five {
+  display:none;
+}

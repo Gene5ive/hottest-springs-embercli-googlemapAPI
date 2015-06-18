@@ -18,7 +18,7 @@ var GoogleMapComponent = {
 
         marker.setMap(map);
 
-    }.on("click")
+    }.on("didInsertElement")
 };
 
 export default Ember.Component.extend(GoogleMapComponent);
