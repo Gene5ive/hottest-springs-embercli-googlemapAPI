@@ -20,53 +20,55 @@ var getRating = function(){
 getRating();
 </script>
 
-<h1>{{model.springName}}</h1>
-<h3>Posted By: {{model.author}}</h3>
+<div class="container">
+  <h1>{{model.springName}}</h1>
+  <h3>Posted By: {{model.author}}</h3>
 
-{{google-map lat=model.lat long=model.long}}
+  {{google-map lat=model.lat long=model.long}}
 
 
-<p>Latitude: {{model.lat}}, Longitude: {{model.long}}</p>
+  <p>Latitude: {{model.lat}}, Longitude: {{model.long}}</p>
 
-  <div id="one">
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  </div>
-  <div id="two">
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  </div>
-  <div id="three">
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  </div>
-  <div id="four">
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  </div>
-  <div id="five">
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  </div>
+    <div id="one">
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    </div>
+    <div id="two">
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    </div>
+    <div id="three">
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    </div>
+    <div id="four">
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    </div>
+    <div id="five">
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+      <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    </div>
 
-<p>Reviews:</p>
-<ul class="list-unstyled review-list">
-  {{#each r in model.reviews}}
-    <li>
-      {{r.reviewerName}}
-      {{r.description}}
-    </li>
-  {{/each}}
-</ul>
+  <p>Reviews:</p>
+  <ul class="list-unstyled review-list">
+    {{#each r in model.reviews}}
+      <li>
+        {{r.reviewerName}}
+        {{r.description}}
+      </li>
+    {{/each}}
+  </ul>
 
-<form id="add-review">
-  {{input value = reviewerName placeholder="Username"}}
-  {{input value = rating placeholder="Rating"}}
-  {{textarea value = description placeholder="Description"}}
-  <button {{action 'addReview'}} class="btn btn-success">Review {{model.springName}}</button>
-</form>
+  <form id="add-review">
+    {{input value = reviewerName placeholder="Username"}}
+    {{input value = rating placeholder="Rating"}}
+    {{textarea value = description placeholder="Description"}}
+    <button {{action 'addReview'}} class="btn btn-success">Review {{model.springName}}</button>
+  </form>
+</div>

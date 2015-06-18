@@ -1,7 +1,9 @@
-<h1>
-  {{#link-to 'spring-details' model.id}}{{model.springName}}{{/link-to}}
-</h1>
+<div class="container">
+  <h1>
+    {{#link-to 'spring-details' model.id}}{{model.springName}}{{/link-to}}
+  </h1>
 
-{{#link-to 'spring-details' model.id}}
-  <img class="image" {{bind-attr src= model.image}} />
-{{/link-to}}
+  {{#link-to 'spring-details' model.id}}
+    <img class="image" {{bind-attr src= model.image}} />
+  {{/link-to}}
+</div>

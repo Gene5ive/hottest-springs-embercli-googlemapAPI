@@ -11,9 +11,9 @@ var SpringDetailsController = {
       });
       var spring = this.get('controllers.spring.model');
       var rating = parseInt(this.get('rating'));
+      var newAvgRating = parseInt(spring.get('avgRating'));
       newReview.save().then(function() {
         spring.get('reviews').pushObject(newReview);
-        var newAvgRating = parseInt(spring.get('avgRating'));
         newAvgRating = Math.floor((newAvgRating + rating)/2);
         spring.set('avgRating', newAvgRating)
         spring.save();

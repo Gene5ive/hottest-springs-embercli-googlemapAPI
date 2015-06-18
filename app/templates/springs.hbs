@@ -1,15 +1,58 @@
 <div class="container">
-  <form id="find-springs">
-    {{input value = springName placeholder="Name of Spring"}}
-    {{input value = author placeholder="Username"}}
-    {{input value = lat placeholder="Latitude"}}
-    {{input value = long placeholder="Longitude"}}
-    {{input value = image placeholder="Image URL"}}
-    {{textarea value = description placeholder="Review"}}
-    {{input value = rating placeholder="rating"}}
-    <button {{action 'add'}} class="btn btn-success">Add Hot Spring</button>
-  </form>
+  <div  class="form-container col-sm-12">
 
+  <form id="find-springs">
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          {{input classNames="form-control" value = springName placeholder="Name of Spring"}}
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          {{input classNames="form-control" value = author placeholder="Username"}}
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group small-form">
+          {{input classNames="form-control" value = lat placeholder="Latitude"}}
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group small-form">
+          {{input classNames="form-control" value = long placeholder="Longitude"}}
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="form-group">
+          {{input classNames="form-control" value = image placeholder="Image URL"}}
+        </div>
+      </div>
+
+    <div class="col-sm-12">
+      <div class="form-group">
+      {{textarea classNames="form-control" value = description placeholder="Review"}}
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+      <div class="form-group">
+      {{input classNames="form-control" value = rating placeholder="Rating"}}
+    </div>
+  </div>
+
+  <button {{action 'add'}} class="btn btn-success">Add Hot Spring</button>
+    </form>
+</div>
+
+
+
+
+<button class= "btn btn-info" {{action "showForm"}}>+ Spring</button>
   <div class="row">
     <div class="col-sm-4">
       <ul class="list-unstyled">

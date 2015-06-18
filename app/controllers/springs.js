@@ -30,7 +30,13 @@ var SpringsController = {
         long: '',
         review: '',
       });
-    }
+      $(".form-container").hide();
+      $(".btn-info").show();
+    },
+  showForm: function() {
+    $(".form-container").show();
+    $(".btn-info").hide();
+  }
   }
 };
 
