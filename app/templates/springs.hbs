@@ -1,26 +1,29 @@
-<form id="find-springs">
-  {{input value = springName placeholder="Name of Spring"}}
-  {{input value = author placeholder="Username"}}
-  {{input value = lat placeholder="Latitude"}}
-  {{input value = long placeholder="Longitude"}}
-  {{textarea value = description placeholder="Review"}}
-  {{input value = rating placeholder="rating"}}
-  <button {{action 'add'}} class="btn btn-success">Add Hot Spring</button>
-</form>
+<div class="container">
+  <form id="find-springs">
+    {{input value = springName placeholder="Name of Spring"}}
+    {{input value = author placeholder="Username"}}
+    {{input value = lat placeholder="Latitude"}}
+    {{input value = long placeholder="Longitude"}}
+    {{input value = image placeholder="Image URL"}}
+    {{textarea value = description placeholder="Review"}}
+    {{input value = rating placeholder="rating"}}
+    <button {{action 'add'}} class="btn btn-success">Add Hot Spring</button>
+  </form>
 
-<div class="row">
-  <div class="col-sm-4">
-    <ul class="list-unstyled">
-      {{#each spring in model}}
-        <li>
-          <h3 class="spring-name">{{#link-to 'spring' spring.id}}{{spring.springName}}{{/link-to}}</h3>
-          <p class="author">posted by: {{spring.author}}</p>
-        </li>
-      {{/each}}
-    </ul>
-  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <ul class="list-unstyled">
+        {{#each spring in model}}
+          <li>
+            <h3 class="spring-name">{{#link-to 'spring' spring.id}}{{spring.springName}}{{/link-to}}</h3>
+            <p class="author">posted by: {{spring.author}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
 
-  <div class="col-sm-8">
-    {{outlet}}
+    <div class="col-sm-8">
+      {{outlet}}
+    </div>
   </div>
 </div>

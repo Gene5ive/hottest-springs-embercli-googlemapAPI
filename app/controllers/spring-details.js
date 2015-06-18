@@ -9,28 +9,32 @@ var SpringDetailsController = {
         rating: this.get('rating'),
         description: this.get('description')
       });
-      newReview.save();
       var spring = this.get('controllers.spring.model');
-      spring.get('reviews').pushObject(newReview);
-
       var rating = parseInt(this.get('rating'));
+      newReview.save().then(function() {
+        spring.get('reviews').pushObject(newReview);
+        var newAvgRating = parseInt(spring.get('avgRating'));
+        newAvgRating = Math.floor((newAvgRating + rating)/2);
+        spring.set('avgRating', newAvgRating)
+        spring.save();
+      });
 
-      var newAvgRating = parseInt(spring.get('avgRating'));
-      newAvgRating = (newAvgRating + rating)/2;
-      spring.set('avgRating', newAvgRating)
-      spring.save();
+      $("#one").hide();
+      $("#two").hide();
+      $("#three").hide();
+      $("#four").hide();
+      $("#five").hide();
 
-alert(newAvgRating);
       if(newAvgRating === 1){
-        $("#one").show();
+        $("#one").fadeIn();
       }else if(newAvgRating === 2){
-        $("#two").show();
+        $("#two").fadeIn();
       }else if(newAvgRating === 3){
-        $("#three").show();
+        $("#three").fadeIn();
       }else if(newAvgRating === 4){
-        $("#four").show();
+        $("#four").fadeIn();
       }else if(newAvgRating === 5){
-        $("#five").show();
+        $("#five").fadeIn();
       };
 
       this.setProperties({
@@ -38,7 +42,6 @@ alert(newAvgRating);
         reviewerName: '',
         description: ''
       });
-
     }
   }
 }

@@ -1,3 +1,7 @@
-<h1>{{#link-to 'spring-details' model.id}}{{model.springName}}{{/link-to}}</h1>
+<h1>
+  {{#link-to 'spring-details' model.id}}{{model.springName}}{{/link-to}}
+</h1>
 
-{{google-map lat=model.lat long=model.long}}
+{{#link-to 'spring-details' model.id}}
+  <img class="image" {{bind-attr src= model.image}} />
+{{/link-to}}

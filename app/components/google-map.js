@@ -2,6 +2,7 @@ import Ember from "ember";
 
 var GoogleMapComponent = {
         insertMap: function(){
+        $(".image").hide();
         var lat = this.get('lat');
         var long = this.get('long');
 

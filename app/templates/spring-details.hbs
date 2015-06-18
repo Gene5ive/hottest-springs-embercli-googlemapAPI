@@ -1,42 +1,61 @@
+<script>
+var getRating = function(){
+  $("#one").hide();
+  $("#two").hide();
+  $("#three").hide();
+  $("#four").hide();
+  $("#five").hide();
+  if ({{model.avgRating}}===1){
+    $("#one").show();
+  }else if ({{model.avgRating}}===2){
+    $("#two").show();
+  }else if ({{model.avgRating}}===3){
+    $("#three").show();
+  }else if ({{model.avgRating}}===4){
+    $("#four").show();
+  }else if ({{model.avgRating}}===5){
+    $("#five").show();
+  };
+};
+getRating();
+</script>
+
 <h1>{{model.springName}}</h1>
 <h3>Posted By: {{model.author}}</h3>
 
 {{google-map lat=model.lat long=model.long}}
 
+
 <p>Latitude: {{model.lat}}, Longitude: {{model.long}}</p>
-<div id="one">
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-</div>
-<div id="two">
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
 
-</div>
-<div id="three">
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-
-</div>
-<div id="four">
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-
-</div>
-<div id="five">
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
-
-</div>
-
+  <div id="one">
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+  </div>
+  <div id="two">
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+  </div>
+  <div id="three">
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+  </div>
+  <div id="four">
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+  </div>
+  <div id="five">
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+    <span class='glyphicon glyphicon-star' aria-hidden='true'></span>
+  </div>
 
 <p>Reviews:</p>
-<ul class="review-list">
+<ul class="list-unstyled review-list">
   {{#each r in model.reviews}}
     <li>
       {{r.reviewerName}}

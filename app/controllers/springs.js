@@ -16,6 +16,7 @@ var SpringsController = {
         lat: this.get('lat'),
         long: this.get('long'),
         avgRating: this.get('rating'),
+        image: this.get('image'),
         zoom: 6
       });
       newSpring.save();

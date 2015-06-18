@@ -1,6 +1,7 @@
 body{
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
+    min-width: 100%;
 }
 
 .container{
@@ -17,4 +18,57 @@ body{
 
 #one, #two, #three, #four, #five {
   display:none;
+}
+
+.image{
+  height:300px;
+}
+
+.item img{
+  min-width: 100%;
+  /*max-width: none;
+  position: absolute;
+  top:-100px;*/
+}
+
+.item {
+  height: 600px;
+  position: absolute;
+}
+
+.us {
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  position: relative;
+  height: 250px;
+  width: 250px;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.jess {
+  background-image: url('jess.jpg');
+}
+
+.gene {
+  background-image: url('frank.jpg');
+}
+
+.erin {
+  background-image: url('erin.jpg');
+}
+
+.about{
+  margin-top: 75px;
+}
+
+.head {
+  font-size: 50px;
+  margin-bottom: 50px;
+  text-align: center;
 }
