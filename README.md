@@ -1,6 +1,7 @@
 # Hottest-springs
 
-Hottest Springs allows user to input information on local hot springs and rate springs by number and review. 
+Hottest Springs allows user to input information on local hot springs and rate springs by number and review.
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
@@ -37,6 +38,10 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
+### Deploying
+
+Specify what it takes to deploy your app.
+
 ## Further Reading / Useful Links
 
 * [ember.js](http://emberjs.com/)
@@ -44,4 +49,3 @@ Make use of the many generators for code, try `ember help generate` for more det
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-

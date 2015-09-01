@@ -1,7 +1,7 @@
 {
   "name": "hottest-springs",
   "version": "0.0.0",
-  "description": "Small description for hottest-springs goes here",
+  "description": "App which allows simulates Airbnb for hot springs using Google Maps API",
   "private": true,
   "directories": {
     "doc": "doc",
