@@ -34,5 +34,8 @@
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
     "emberfire": "1.4.6"
+  },
+  "dependencies": {
+    "newrelic": "^1.15.0"
   }
 }
